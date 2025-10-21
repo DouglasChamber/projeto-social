@@ -59,3 +59,11 @@ section#redes-sociais img:hover {
     box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.6);
     transition: transform .35s, border 1s;
 }
+
+/* Correção para mobile: mantém os ícones à frente do celular */
+section#redes-sociais {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
