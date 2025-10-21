@@ -10,7 +10,7 @@ html, body {
     height: 100%;
     width: 100%;
     background-color: black;
-    overflow: hidden; /* remove barra de rolagem */
+    overflow: hidden; /* remove barra de rolagem externa */
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 
 main {
     position: relative;
-    height: 100%;
+    height: 100%; /* em vez de 100vh */
 }
 
 /* Moldura do telefone */
@@ -43,7 +43,10 @@ iframe#tela {
     left: 22px;
     width: 267px;
     height: 471px;
-    z-index: 1; /* também atrás */
+    border: none;
+    overflow: auto; /* permite rolagem dentro do iframe */
+    -webkit-overflow-scrolling: touch; /* rolagem suave no iOS */
+    z-index: 1;
 }
 
 /* Ícones das redes sociais */

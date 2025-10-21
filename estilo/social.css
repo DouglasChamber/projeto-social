@@ -1,32 +1,41 @@
 @charset "UTF-8";
-          
-        * {
-            margin: 0px;
-            padding: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
 
-        ::-webkit-scrollbar {
-            width: 0px;
-            height: 0px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        img {
-            width: 100vw;
-        }
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 
-        a {
-            display: block;
-            background-color: darkred;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-weight: bolder;
-            text-decoration: none;
-        }
+/* Permite que o conteúdo role se for maior que a tela */
+body {
+    min-height: 100vh; /* altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente se couber */
+    align-items: center;     /* centraliza horizontalmente */
+    background: #000; /* fundo preto */
+}
 
-        a:hover {
-            background-color: rgb(202, 33, 33);
-            color: black
-        }
- 
+/* Links estilizados como botões */
+a {
+    display: block;
+    width: 80%; /* ocupa 80% da largura da tela */
+    margin: 10px 0; /* espaçamento igual em cima e embaixo */
+    padding: 15px;
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: none;
+    border-radius: 8px; /* opcional */
+}
+
+a:hover {
+    background-color: rgb(202, 33, 33);
+    color: black;
+}
